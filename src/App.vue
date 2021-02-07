@@ -1,26 +1,59 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header></Header>
+  <Promo></Promo>
+  <Offers></Offers>
+  <Exchange v-if="getSiteData"></Exchange>
+  <LearnMore></LearnMore>
+  <Pay></Pay>
+  <Api></Api>
+  <Advantages></Advantages>
+  <Footer></Footer>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "@/components/Header";
+import Promo from "@/components/Promo";
+import Offers from "@/components/Offers";
+import Exchange from "@/components/Exchange";
+import LearnMore from "@/components/LearnMore";
+import Pay from "@/components/Pay";
+import Api from "@/components/Api";
+import Advantages from "@/components/Advantages";
+import Footer from "@/components/Footer";
+
+import {mapGetters} from 'vuex'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      data: ''
+    }
+  },
   components: {
-    HelloWorld
+    Header, Promo, Offers, Exchange, LearnMore, Pay, Api, Advantages, Footer
+  },
+  mounted() {
+    this.$store.dispatch('getSiteData')
+  },
+  computed:{
+    ...mapGetters([
+        'getSiteData'
+    ])
   }
 }
+
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@import "../../node_modules/normalize.css/normalize";
+@import "assets/scss/mixins/_breakpoint.scss";
+@import "assets/scss/_helpers.scss";
+@import "assets/scss/_base.scss";
+@import "assets/scss/layout.scss";
+
+body{
+  font-family: 'Roboto', sans-serif;
 }
+
 </style>
