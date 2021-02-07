@@ -106,6 +106,9 @@ export default {
     }
     .name{
       width: 33%!important;
+      .abb{
+        margin-right: 10px;
+      }
     }
   }
   > * {

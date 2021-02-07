@@ -81,14 +81,18 @@ export default {
   top: 30px;
   left: 60%;
   @media (max-width: 768px) {
-    top: 70px;
+    top: 80px;
     right: 0;
     left: unset;
+    width: 100%;
   }
 }
 
 .swiper-container {
   padding-top: 100px;
+  @media (max-width: 768px) {
+    padding-top: 120px;
+  }
   margin-top: -50px;
 }
 

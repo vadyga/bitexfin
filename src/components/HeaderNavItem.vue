@@ -23,6 +23,9 @@ export default {
 li {
   &:not(:last-child) {
     margin-right: 15px;
+    @media (max-width: 1279px) {
+      margin-right: 0;
+    }
   }
   a{
     color: inherit;

@@ -138,6 +138,7 @@ footer {
     @media (max-width: 768px) {
       flex-wrap: wrap;
     }
+
     h4 {
       font-size: 18px;
       color: #9f9f9f;
@@ -159,6 +160,7 @@ footer {
       @media (max-width: 500px) {
         text-align: center;
       }
+
       .contact-wrapper {
         display: flex;
 
@@ -168,7 +170,18 @@ footer {
         }
 
         margin-bottom: 10px;
+        @media (max-width: 768px) {
+          flex-wrap: wrap;
+          .label {
+            width: 100%;
+            margin-bottom: 10px;
+          }
+          .value {
+            width: 100%;
+          }
+        }
       }
+
 
       .logo {
         filter: invert(1);
@@ -185,6 +198,7 @@ footer {
         width: 100%;
         text-align: center;
       }
+
       ul {
         padding: 0;
         list-style: none;
@@ -212,6 +226,7 @@ footer {
         width: 100%;
         text-align: center;
       }
+
       .contact-wrapper {
         display: flex;
 
@@ -221,6 +236,16 @@ footer {
         }
 
         margin-bottom: 10px;
+        @media (max-width: 768px) {
+          flex-wrap: wrap;
+          .label {
+            width: 100%;
+            margin-bottom: 10px;
+          }
+          .value {
+            width: 100%;
+          }
+        }
       }
 
       input {
@@ -233,16 +258,19 @@ footer {
           border-color: $main-red;
         }
       }
-      .social-wrapper{
+
+      .social-wrapper {
         display: flex;
         justify-content: space-between;
-        .icons{
-          a{
+
+        .icons {
+          a {
             margin-right: 10px;
           }
         }
-        .bank{
-          img{
+
+        .bank {
+          img {
             margin-left: 10px;
           }
         }

@@ -110,6 +110,8 @@ ul{
     margin-bottom: 15px;
 
     a {
+      width: 90%;
+      margin: auto;
       display: block;
       color: white;
       background-color: $main-red;

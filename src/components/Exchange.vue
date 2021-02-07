@@ -42,7 +42,7 @@ import ExchangeItem from "@/components/ExchangeItem";
 
 export default {
   name: "Exchange",
-  data: function (){
+  data: function () {
     return {
       isHidden: true
     }
@@ -60,36 +60,47 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#exchange{
+#exchange {
   padding: 70px 0;
-  .show-more{
+
+  .show-more {
     text-align: center;
-    &.shown{
+
+    &.shown {
       transform: rotate(180deg);
     }
   }
-  .table-header{
+
+  .table-header {
     display: flex;
     justify-content: space-between;
     @media (max-width: 1023px) {
       justify-content: unset;
     }
-      padding-bottom: 30px;
+    padding-bottom: 30px;
     border-bottom: 1px solid #e1e1e1;
     font-size: 14px;
     font-weight: 600;
-    .name{
+
+    .name {
       width: 40%;
     }
+
     @media (max-width: 1023px) {
-      .name{
+      .name {
         width: 50%;
       }
-      .last-amount{
+      .last-amount {
         width: 18%;
       }
-      .change{
+      .change {
         width: 17%;
+      }
+    }
+    @media (max-width: 767px) {
+      justify-content: space-between;
+      > * {
+        width: unset!important;
       }
     }
   }
